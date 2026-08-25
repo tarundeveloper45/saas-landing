@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Features — Terminus | Logs, Metrics, Alerts & CLI in One Platform</title>
+<meta name="description" content="Explore every Terminus feature: unified log search, anomaly detection, smart alert routing, dashboards-as-code, the terminus CLI, and 120+ integrations." />
+<meta name="keywords" content="observability features, log search, anomaly detection, alert routing, devops cli, dashboards as code" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Terminus, Inc." />
+<link rel="canonical" href="https://terminus.dev/features.html" />
+<meta name="theme-color" content="#0a0a0a" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Terminus" />
+<meta property="og:title" content="Features — Terminus | Logs, Metrics, Alerts & CLI in One Platform" />
+<meta property="og:description" content="Unified log search, anomaly detection, smart alert routing, dashboards-as-code, and a fast CLI — all in one platform." />
+<meta property="og:image" content="https://placehold.co/1200x630/0a0a0a/00ff88?text=TERMINUS+FEATURES" />
+<meta property="og:url" content="https://terminus.dev/features.html" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Features — Terminus" />
+<meta name="twitter:description" content="Unified log search, anomaly detection, smart alert routing, dashboards-as-code, and a fast CLI — all in one platform." />
+<meta name="twitter:image" content="https://placehold.co/1200x630/0a0a0a/00ff88?text=TERMINUS+FEATURES" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230a0a0a'/%3E%3Ctext x='50' y='66' font-size='46' text-anchor='middle' fill='%2300ff88' font-family='monospace' font-weight='bold'%3E%3E_%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: { fontFamily: { mono: ['"JetBrains Mono"', '"Fira Code"', 'ui-monospace', 'monospace'] } } }
+  };
+</script>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="features" class="bg-[var(--bg)] text-[var(--text)] font-mono antialiased overflow-x-hidden pb-[72px]">
+
+<div id="preloader">
+  <div class="preloader-box">
+    <p class="preloader-line show text-[var(--text)]">root@terminus:~$ ./boot.sh</p>
+    <p class="preloader-line">loading kernel modules <span class="ok">[OK]</span></p>
+    <p class="preloader-line">indexing feature registry <span class="ok">[OK]</span></p>
+    <p class="preloader-line">starting dashboard <span class="ok">[READY]</span></p>
+    <div class="preloader-bar-track"><div class="preloader-bar-fill"></div></div>
+  </div>
+</div>
+
+<nav id="site-nav" class="fixed top-0 inset-x-0 z-40 transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-16">
+    <a href="index.html" class="flex items-center gap-1.5 text-lg font-bold tracking-tight shrink-0">
+      <span class="text-[var(--accent)]">&gt;</span>terminus<span class="cursor-blink"></span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm">
+      <a href="index.html" class="nav-link" data-page-link="home">home</a>
+      <a href="features.html" class="nav-link" data-page-link="features">features</a>
+      <a href="pricing.html" class="nav-link" data-page-link="pricing">pricing</a>
+      <a href="about.html" class="nav-link" data-page-link="about">about</a>
+      <a href="contact.html" class="nav-link" data-page-link="contact">contact</a>
+    </div>
+    <div class="hidden md:flex items-center gap-4">
+      <button data-theme-toggle aria-label="Toggle color theme" class="w-9 h-9 rounded border border-[var(--border-strong)] flex items-center justify-center hover:border-[var(--accent)] hover:bg-[var(--accent-tint)] transition-colors">
+        <svg data-icon="sun" class="w-4 h-4 text-[var(--accent)]" style="display:inline-flex" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1.5m0 15V21m9-9h-1.5M4.5 12H3m15.364-6.364l-1.06 1.06M6.696 17.304l-1.06 1.06m12.728 0l-1.06-1.06M6.696 6.696L5.636 5.636M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" /></svg>
+        <svg data-icon="moon" class="w-4 h-4 text-[var(--accent)]" style="display:none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+      </button>
+      <a href="contact.html" class="btn-primary text-sm px-4 py-2 rounded">get started</a>
+    </div>
+    <div class="flex md:hidden items-center gap-2">
+      <button data-theme-toggle aria-label="Toggle color theme" class="w-9 h-9 rounded border border-[var(--border-strong)] flex items-center justify-center">
+        <svg data-icon="sun" class="w-4 h-4 text-[var(--accent)]" style="display:inline-flex" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1.5m0 15V21m9-9h-1.5M4.5 12H3m15.364-6.364l-1.06 1.06M6.696 17.304l-1.06 1.06m12.728 0l-1.06-1.06M6.696 6.696L5.636 5.636M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" /></svg>
+        <svg data-icon="moon" class="w-4 h-4 text-[var(--accent)]" style="display:none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+      </button>
+      <button id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false" class="flex flex-col gap-[5px] p-2">
+        <span class="hamburger-line line-1"></span>
+        <span class="hamburger-line line-2"></span>
+        <span class="hamburger-line line-3"></span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden px-5 pb-4 flex flex-col gap-1 text-sm">
+    <a href="index.html" class="nav-link py-2" data-page-link="home">home</a>
+    <a href="features.html" class="nav-link py-2" data-page-link="features">features</a>
+    <a href="pricing.html" class="nav-link py-2" data-page-link="pricing">pricing</a>
+    <a href="about.html" class="nav-link py-2" data-page-link="about">about</a>
+    <a href="contact.html" class="nav-link py-2" data-page-link="contact">contact</a>
+    <a href="contact.html" class="btn-primary text-center px-4 py-2.5 rounded mt-2">get started</a>
+  </div>
+</nav>
+
+<header class="relative pt-32 pb-14 sm:pt-40 sm:pb-16 border-b border-[var(--border)]">
+  <div class="grid-fade-bg absolute inset-0 z-0"></div>
+  <div class="relative z-10 max-w-3xl mx-auto px-5 sm:px-8 text-center">
+    <p class="reveal section-tag text-[var(--accent)] text-xs uppercase tracking-widest font-semibold mb-3">the full toolkit</p>
+    <h1 class="reveal text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.1]">Built for the moment<br class="hidden sm:block" /> something breaks</h1>
+    <p class="reveal text-[var(--text-dim)] mt-5 text-base sm:text-lg" style="transition-delay:80ms">Every feature below exists because an on-call engineer asked for it. No vanity dashboards — just the tools that get you to root cause faster.</p>
+  </div>
+</header>
+
+<section class="py-14 sm:py-16">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5 [&>*]:break-inside-avoid">
+
+      <div class="reveal card p-6">
+        <div class="w-10 h-10 rounded bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] mb-4 text-lg">◧</div>
+        <h3 class="font-bold mb-2">Unified log search</h3>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed">Full-text and structured search across every service in under 200ms. Save queries, share links, and pin filters your whole team reuses during incidents.</p>
+      </div>
+
+      <div class="reveal card p-6" style="transition-delay:40ms">
+        <div class="w-10 h-10 rounded bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] mb-4 text-lg">▲</div>
+        <h3 class="font-bold mb-2">Anomaly detection</h3>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed">Statistical baselines learn what "normal" looks like per-service and per-hour, so you get paged for the weird stuff instead of every minor blip.</p>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed mt-3">Retrain instantly after a known traffic shift — no ticket required.</p>
+      </div>
+
+      <div class="reveal card p-6" style="transition-delay:80ms">
+        <div class="w-10 h-10 rounded bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] mb-4 text-lg">◎</div>
+        <h3 class="font-bold mb-2">Smart alert routing</h3>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed">Route by service ownership, severity, and business hours. Auto-escalate if nobody acknowledges within your SLA window.</p>
+      </div>
+
+      <div class="reveal card p-6" style="transition-delay:120ms">
+        <div class="w-10 h-10 rounded bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] mb-4 text-lg">▤</div>
+        <h3 class="font-bold mb-2">Dashboards-as-code</h3>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed">Define dashboards in YAML and version them alongside your services. Drag-and-drop still works for quick one-offs.</p>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed mt-3">Ship a dashboard update in the same PR as the feature it monitors.</p>
+      </div>
+
+      <div class="reveal card p-6" style="transition-delay:160ms">
+        <div class="w-10 h-10 rounded bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] mb-4 text-lg">⌘</div>
+        <h3 class="font-bold mb-2">terminus CLI</h3>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed">Query metrics, tail logs, and ack alerts without leaving your terminal. Fully scriptable and pipe-friendly for on-call automation.</p>
+      </div>
+
+      <div class="reveal card p-6" style="transition-delay:200ms">
+        <div class="w-10 h-10 rounded bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] mb-4 text-lg">⧉</div>
+        <h3 class="font-bold mb-2">120+ integrations</h3>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed">Kubernetes, Postgres, Kafka, Redis, Slack, PagerDuty, and more. Most connect with a single API key.</p>
+      </div>
+
+      <div class="reveal card p-6" style="transition-delay:240ms">
+        <div class="w-10 h-10 rounded bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] mb-4 text-lg">⏱</div>
+        <h3 class="font-bold mb-2">Distributed tracing</h3>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed">Follow a request across every service it touches. Flame graphs render in-browser with zero extra tooling.</p>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed mt-3">Auto-correlated with the logs and metrics from the same trace ID.</p>
+      </div>
+
+      <div class="reveal card p-6" style="transition-delay:280ms">
+        <div class="w-10 h-10 rounded bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] mb-4 text-lg">☍</div>
+        <h3 class="font-bold mb-2">Synthetic monitoring</h3>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed">Scripted checks run from 14 global regions every 60 seconds, catching regional outages before real users do.</p>
+      </div>
+
+      <div class="reveal card p-6" style="transition-delay:320ms">
+        <div class="w-10 h-10 rounded bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] mb-4 text-lg">✎</div>
+        <h3 class="font-bold mb-2">Incident postmortems</h3>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed">Auto-generated timelines pull in every alert, deploy, and log spike so your writeup starts 80% done.</p>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed mt-3">Export straight to Markdown or Notion.</p>
+      </div>
+
+      <div class="reveal card p-6" style="transition-delay:360ms">
+        <div class="w-10 h-10 rounded bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] mb-4 text-lg">⛨</div>
+        <h3 class="font-bold mb-2">SOC 2 + RBAC</h3>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed">Role-based access control down to the dashboard level, SSO via SAML/OIDC, and full audit logging out of the box.</p>
+      </div>
+
+      <div class="reveal card p-6" style="transition-delay:400ms">
+        <div class="w-10 h-10 rounded bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] mb-4 text-lg">⇄</div>
+        <h3 class="font-bold mb-2">Cost & capacity insights</h3>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed">See spend and headroom per service, with forecasts that flag which cluster will need scaling next quarter.</p>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed mt-3">Attribute infra cost to teams automatically via tags.</p>
+      </div>
+
+      <div class="reveal card p-6" style="transition-delay:440ms">
+        <div class="w-10 h-10 rounded bg-[var(--accent-dim)] flex items-center justify-center text-[var(--accent)] mb-4 text-lg">◫</div>
+        <h3 class="font-bold mb-2">Mobile on-call app</h3>
+        <p class="text-sm text-[var(--text-dim)] leading-relaxed">Ack, snooze, or escalate alerts from your phone. Push notifications bypass silent mode for critical severity.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Integration logos -->
+<section class="py-14 sm:py-16 bg-[var(--bg-soft)] border-y border-[var(--border)]">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="reveal max-w-2xl mb-10">
+      <p class="section-tag text-[var(--accent)] text-xs uppercase tracking-widest font-semibold mb-3">integrations</p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Plugs into the stack you already run</h2>
+      <p class="text-[var(--text-dim)] mt-3 text-sm sm:text-base">120+ integrations and growing — request one and our team typically ships it within a sprint.</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div class="reveal card p-5 flex flex-col items-center justify-center gap-2 text-center"><span class="text-2xl">⎈</span><span class="text-xs text-[var(--text-dim)]">Kubernetes</span></div>
+      <div class="reveal card p-5 flex flex-col items-center justify-center gap-2 text-center" style="transition-delay:40ms"><span class="text-2xl">🐘</span><span class="text-xs text-[var(--text-dim)]">Postgres</span></div>
+      <div class="reveal card p-5 flex flex-col items-center justify-center gap-2 text-center" style="transition-delay:80ms"><span class="text-2xl">⚡</span><span class="text-xs text-[var(--text-dim)]">Kafka</span></div>
+      <div class="reveal card p-5 flex flex-col items-center justify-center gap-2 text-center" style="transition-delay:120ms"><span class="text-2xl">💬</span><span class="text-xs text-[var(--text-dim)]">Slack</span></div>
+      <div class="reveal card p-5 flex flex-col items-center justify-center gap-2 text-center" style="transition-delay:160ms"><span class="text-2xl">📟</span><span class="text-xs text-[var(--text-dim)]">PagerDuty</span></div>
+      <div class="reveal card p-5 flex flex-col items-center justify-center gap-2 text-center" style="transition-delay:200ms"><span class="text-2xl">🐳</span><span class="text-xs text-[var(--text-dim)]">Docker</span></div>
+      <div class="reveal card p-5 flex flex-col items-center justify-center gap-2 text-center" style="transition-delay:240ms"><span class="text-2xl">☁️</span><span class="text-xs text-[var(--text-dim)]">AWS</span></div>
+      <div class="reveal card p-5 flex flex-col items-center justify-center gap-2 text-center" style="transition-delay:280ms"><span class="text-2xl">🔺</span><span class="text-xs text-[var(--text-dim)]">Vercel</span></div>
+      <div class="reveal card p-5 flex flex-col items-center justify-center gap-2 text-center" style="transition-delay:320ms"><span class="text-2xl">🐙</span><span class="text-xs text-[var(--text-dim)]">GitHub</span></div>
+      <div class="reveal card p-5 flex flex-col items-center justify-center gap-2 text-center" style="transition-delay:360ms"><span class="text-2xl">🗄️</span><span class="text-xs text-[var(--text-dim)]">Redis</span></div>
+      <div class="reveal card p-5 flex flex-col items-center justify-center gap-2 text-center" style="transition-delay:400ms"><span class="text-2xl">📊</span><span class="text-xs text-[var(--text-dim)]">Datadog</span></div>
+      <div class="reveal card p-5 flex flex-col items-center justify-center gap-2 text-center" style="transition-delay:440ms"><span class="text-2xl">➕</span><span class="text-xs text-[var(--text-dim)]">114 more</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 sm:py-20">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <h2 class="reveal text-2xl sm:text-3xl font-extrabold tracking-tight">Ready to see it on your own infrastructure?</h2>
+    <p class="reveal text-[var(--text-dim)] mt-3 text-sm sm:text-base" style="transition-delay:60ms">Spin up a free workspace and connect your first service in minutes.</p>
+    <div class="reveal flex flex-wrap gap-4 justify-center mt-7" style="transition-delay:120ms">
+      <a href="contact.html" class="btn-primary px-6 py-3 rounded text-sm">start free trial →</a>
+      <a href="pricing.html" class="btn-outline px-6 py-3 rounded text-sm">view pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="py-14 sm:py-16 border-t border-[var(--border)]">
+  <div class="max-w-2xl mx-auto px-5 sm:px-8 text-center">
+    <p class="reveal section-tag text-[var(--accent)] text-xs uppercase tracking-widest font-semibold mb-3">stay in the loop</p>
+    <h2 class="reveal text-2xl sm:text-3xl font-extrabold tracking-tight">Subscribe to the changelog</h2>
+    <p class="reveal text-[var(--text-dim)] mt-3 text-sm sm:text-base" style="transition-delay:60ms">New features land almost every sprint. We'll tell you when they ship.</p>
+    <form data-newsletter-form class="reveal mt-7 flex flex-col sm:flex-row gap-3 justify-center" style="transition-delay:120ms">
+      <label for="features-newsletter-email" class="sr-only">Email address</label>
+      <input id="features-newsletter-email" type="email" required placeholder="you@company.com" class="flex-1 sm:max-w-xs px-4 py-3 rounded text-sm" />
+      <button type="submit" class="btn-primary px-6 py-3 rounded text-sm whitespace-nowrap">subscribe →</button>
+    </form>
+    <p data-form-msg class="text-xs mt-3" style="min-height:1rem;"></p>
+  </div>
+</section>
+
+<footer class="border-t border-[var(--border)] pt-14 pb-10">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 pb-10">
+      <div class="lg:col-span-2">
+        <a href="index.html" class="flex items-center gap-1.5 text-lg font-bold tracking-tight">
+          <span class="text-[var(--accent)]">&gt;</span>terminus<span class="cursor-blink"></span>
+        </a>
+        <p class="text-sm text-[var(--text-dim)] mt-4 max-w-xs leading-relaxed">Real-time infrastructure monitoring built for engineers who live in the terminal.</p>
+        <div class="flex gap-3 mt-5">
+          <a href="#" aria-label="Terminus on GitHub" class="w-9 h-9 rounded border border-[var(--border)] flex items-center justify-center hover:border-[var(--accent)] transition-colors text-[var(--text-dim)] hover:text-[var(--accent)]">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 015.73 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.05.78 2.12v3.15c0 .3.21.66.79.55A10.52 10.52 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+          </a>
+          <a href="#" aria-label="Terminus on X" class="w-9 h-9 rounded border border-[var(--border)] flex items-center justify-center hover:border-[var(--accent)] transition-colors text-[var(--text-dim)] hover:text-[var(--accent)]">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.9 2H22l-7.6 8.7L23.4 22h-7.1l-5.5-7.2L4.4 22H1.3l8.1-9.3L.9 2h7.3l5 6.6L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg>
+          </a>
+          <a href="#" aria-label="Terminus on LinkedIn" class="w-9 h-9 rounded border border-[var(--border)] flex items-center justify-center hover:border-[var(--accent)] transition-colors text-[var(--text-dim)] hover:text-[var(--accent)]">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1s2.5 1.12 2.5 2.5zM.24 8.25h4.48V23H.24V8.25zM8.24 8.25h4.29v2.01h.06c.6-1.14 2.06-2.34 4.24-2.34 4.54 0 5.38 2.99 5.38 6.87V23h-4.48v-6.35c0-1.51-.03-3.46-2.11-3.46-2.11 0-2.43 1.65-2.43 3.35V23H8.24V8.25z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest text-[var(--text-dim)] font-semibold mb-4">product</p>
+        <ul class="space-y-2.5 text-sm text-[var(--text-dim)]">
+          <li><a href="features.html" class="hover:text-[var(--accent)] transition-colors">features</a></li>
+          <li><a href="pricing.html" class="hover:text-[var(--accent)] transition-colors">pricing</a></li>
+          <li><a href="index.html#how-it-works" class="hover:text-[var(--accent)] transition-colors">how it works</a></li>
+          <li><a href="#" class="hover:text-[var(--accent)] transition-colors">changelog</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest text-[var(--text-dim)] font-semibold mb-4">company</p>
+        <ul class="space-y-2.5 text-sm text-[var(--text-dim)]">
+          <li><a href="about.html" class="hover:text-[var(--accent)] transition-colors">about</a></li>
+          <li><a href="contact.html" class="hover:text-[var(--accent)] transition-colors">contact</a></li>
+          <li><a href="#" class="hover:text-[var(--accent)] transition-colors">careers</a></li>
+          <li><a href="#" class="hover:text-[var(--accent)] transition-colors">blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-widest text-[var(--text-dim)] font-semibold mb-4">legal</p>
+        <ul class="space-y-2.5 text-sm text-[var(--text-dim)]">
+          <li><a href="#" class="hover:text-[var(--accent)] transition-colors">privacy policy</a></li>
+          <li><a href="#" class="hover:text-[var(--accent)] transition-colors">terms of service</a></li>
+          <li><a href="#" class="hover:text-[var(--accent)] transition-colors">security</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-[var(--border)] pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--text-dim)]">
+      <p>© 2026 Terminus, Inc. All rights reserved.</p>
+      <p class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"></span> all systems operational</p>
+    </div>
+  </div>
+</footer>
+
+<div id="sticky-cta">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between gap-4">
+    <div class="hidden sm:flex items-center gap-6 text-xs text-[var(--text-dim)]">
+      <span class="text-[var(--text)] font-semibold">ready to ship faster?</span>
+      <a href="pricing.html" class="nav-link">pricing</a>
+      <a href="features.html" class="nav-link">features</a>
+      <a href="contact.html" class="nav-link">contact</a>
+    </div>
+    <div class="flex items-center gap-3 w-full sm:w-auto justify-between">
+      <a href="contact.html" class="btn-primary px-5 py-2 rounded text-sm whitespace-nowrap">start free trial</a>
+      <button data-cta-close aria-label="Dismiss" class="text-[var(--text-dim)] hover:text-[var(--text)] text-lg leading-none px-2">×</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
